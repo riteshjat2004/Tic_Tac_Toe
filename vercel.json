@@ -1,17 +1,14 @@
 {
   "name": "tic-tac-toe-pro",
-  "version": 1,
   "framework": "static",
   "cleanUrls": true,
   "trailingSlash": false,
-
   "rewrites": [
     {
       "source": "/(.*)",
       "destination": "/index.html"
     }
   ],
-
   "headers": [
     {
       "source": "/(.*)",
