@@ -1,6 +1,5 @@
 {
   "name": "tic-tac-toe-pro",
-  "framework": "static",
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
