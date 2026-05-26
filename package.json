@@ -1,0 +1,24 @@
+{
+  "name": "tic-tac-toe-pro",
+  "version": "2.0.0",
+  "description": "Ultimate Tic Tac Toe game with AI opponent, dark mode, and real-time scoring",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server",
+    "dev": "npx http-server -p 8080 -o"
+  },
+  "keywords": [
+    "tic-tac-toe",
+    "game",
+    "ai",
+    "javascript",
+    "html5",
+    "css3"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/riteshjat2004/Tic_Tac_Toe.git"
+  }
+}
