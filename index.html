@@ -4,40 +4,71 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tic Tac Toe</title>
+    <title>Ultimate Tic Tac Toe</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <nav>
-      <ul>
-        <li>MyTicTacToe.com</li>
-      </ul>
+      <div class="nav-container">
+        <h1 class="logo">🎮 TicTacToe Pro</h1>
+        <button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
+      </div>
     </nav>
 
-    <div class="gameContainer">
+    <!-- Game Mode Selection -->
+    <div class="gameMode" id="gameModeScreen">
+      <h2>Select Game Mode</h2>
+      <button class="mode-btn" id="pvpBtn">👥 Player vs Player</button>
+      <button class="mode-btn" id="aiBtn">🤖 Player vs AI</button>
+    </div>
+
+    <!-- Main Game Container -->
+    <div class="gameContainer" id="gameContainer" style="display: none;">
+      <div class="gameBoard">
         <div class="container">
           <div class="line"></div>
-        <div class="box bt-0 bl-0"><span class="boxtext"></span></div>
-        <div class="box bt-0"><span class="boxtext"></span></div>
-        <div class="box bt-0 br-0"><span class="boxtext"></span></div>
-        <div class="box bl-0"><span class="boxtext"></span></div>
-        <div class="box"><span class="boxtext"></span></div>
-        <div class="box br-0"><span class="boxtext"></span></div>
-        <div class="box bl-0 bb-0"><span class="boxtext"></span></div>
-        <div class="box bb-0"><span class="boxtext"></span></div>
-        <div class="box bb-0 br-0"><span class="boxtext"></span></div>
-      </div>
-      <div class="gameInfo">
-        <h1>Welcome to Tic Tac MyTicTacToe</h1>
-        <div>
-          <span class="info">Turn for X</span>
-          <button id="reset">Reset</button>
+          <div class="box bt-0 bl-0"><span class="boxtext"></span></div>
+          <div class="box bt-0"><span class="boxtext"></span></div>
+          <div class="box bt-0 br-0"><span class="boxtext"></span></div>
+          <div class="box bl-0"><span class="boxtext"></span></div>
+          <div class="box"><span class="boxtext"></span></div>
+          <div class="box br-0"><span class="boxtext"></span></div>
+          <div class="box bl-0 bb-0"><span class="boxtext"></span></div>
+          <div class="box bb-0"><span class="boxtext"></span></div>
+          <div class="box bb-0 br-0"><span class="boxtext"></span></div>
         </div>
-        <div class="imgbox">
-          <img src="excited.gif" alt="" />
+        <div class="gameInfo">
+          <div class="status-section">
+            <span class="info" id="gameStatus">Turn for X</span>
+            <span class="difficulty" id="diffDisplay" style="display: none;"></span>
+          </div>
+          <div class="button-group">
+            <button id="reset" class="btn btn-primary">🔄 New Game</button>
+            <button id="backBtn" class="btn btn-secondary">← Back</button>
+          </div>
+          <div class="imgbox">
+            <img src="excited.gif" alt="celebration" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Score Board -->
+      <div class="scoreboard">
+        <div class="score-item">
+          <span class="score-label">Player X</span>
+          <span class="score-value" id="scoreX">0</span>
+        </div>
+        <div class="score-item">
+          <span class="score-label">Draws</span>
+          <span class="score-value" id="scoreDraw">0</span>
+        </div>
+        <div class="score-item">
+          <span class="score-label">Player O / AI</span>
+          <span class="score-value" id="scoreO">0</span>
         </div>
       </div>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>
